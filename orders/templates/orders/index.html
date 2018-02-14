@@ -1,0 +1,220 @@
+{% extends 'base.html'  %}
+
+{% block title %} Amazon ERP order page {% endblock %}
+
+{% block leftpanel %}
+<div class="box" >
+    <ul>
+        <li class="graybackground"><div class="">订单</div></li>
+        <li class="grayboxinline"><div class="">全部订单</div></li>
+        <li class="grayboxinline"><div class="">待处理</div> </li>
+        <li class="grayboxinline"><div class="">运单号申请</div></li>
+        <li class="grayboxinline"><div class="indent20">自营仓库</div></li>
+        <li class="grayboxinline"><div class="indent20">第三方仓库</div></li>
+        <li class="grayboxinline"><div class="">待打单</div></li>
+        <li class="grayboxinline"><div class="indent20">有货</div></li>
+        <li class="grayboxinline"><div class="indent20">缺货</div></li>
+        <li class="grayboxinline"><div class="">已交运</div></li>
+        <li class="grayboxinline"><div class="indent20">发货成功</div></li>
+        <li class="grayboxinline selected"><div class="indent20">发货失败</div></li>
+        <li class="graybackground"><div class="">其他</div></li>
+        <li class="grayboxinline"><div class="indent20">已退款</div></li>
+        <li class="grayboxinline"><div class="indent20">已搁置</div></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block rightpanel %}
+<div>
+    {# 筛选 #}
+    <div class="box"  id="orderfilter">
+        <ul>
+            <li class="graybackground">
+                <div class="indent10">当前位置： 订单 > 待处理	</div>
+            </li>
+            <li class="grayboxinline">
+                <div class="indent20">
+                    <div class="qudao">
+                        <table>
+                            <tr>
+                                <td><span class="floatleft">平台渠道：</span></td>
+                                <td>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">全部</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Wish</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">eBay</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Amazon</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Lazada</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">其他</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td><span class="floatleft">店铺账号：</span></td>
+                                <td>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">全部</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Wish</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">eBay</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Amazon</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Lazada</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">其他</a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </li>
+            <li class="grayboxinline">
+                <div class="indent20">
+                    <div>
+                        <table>
+                            <tr>
+                                <td><span class="floatleft">店铺账号：</span></td>
+                                <td>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">全部</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Wish</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">eBay</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Amazon</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Lazada</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">其他</a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td><span class="floatleft">店铺账号：</span></td>
+                                <td>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">全部</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Wish</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">eBay</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Amazon</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Lazada</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">其他</a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td><span class="floatleft">店铺账号：</span></td>
+                                <td>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">全部</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Wish</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">eBay</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Amazon</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Lazada</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">其他</a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </li>
+            <li class="grayboxinline">
+                <div class="indent20">
+                    <div>
+                        <table>
+                            <tr>
+                                <td><span class="floatleft">店铺账号：</span></td>
+                                <td>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">全部</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Wish</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">eBay</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Amazon</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">Lazada</a>
+                                    <a class="filteritem" href="#" onclick="javascript('#')">其他</a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <div id="content">
+
+        {#operations#}
+        <div class="operations">
+            <el-button type="primary">申请运单号</el-button>
+            <el-dropdown>
+              <el-button type="primary">
+                批量操作<i class="el-icon-caret-bottom el-icon--right"></i>
+              </el-button>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item>黄金糕</el-dropdown-item>
+                <el-dropdown-item>狮子头</el-dropdown-item>
+                <el-dropdown-item>螺蛳粉</el-dropdown-item>
+                <el-dropdown-item>双皮奶</el-dropdown-item>
+                <el-dropdown-item>蚵仔煎</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+
+            <el-button type="success" class="pull-right">同步订单</el-button>
+            <div style="margin-right:5px" class="pull-right">
+                <el-dropdown >
+                  <el-button type="primary">
+                    导出订单<i class="el-icon-caret-bottom el-icon--right"></i>
+                  </el-button>
+                  <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item>黄金糕</el-dropdown-item>
+                    <el-dropdown-item>狮子头</el-dropdown-item>
+                    <el-dropdown-item>螺蛳粉</el-dropdown-item>
+                    <el-dropdown-item>双皮奶</el-dropdown-item>
+                    <el-dropdown-item>蚵仔煎</el-dropdown-item>
+                  </el-dropdown-menu>
+                </el-dropdown>
+            </div>
+            <div style="margin-right:5px" class="pull-right">
+                <el-dropdown class="pull-right">
+              <el-button type="primary" >
+                导入发货<i class="el-icon-caret-bottom el-icon--right"></i>
+              </el-button>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item>黄金糕</el-dropdown-item>
+                <el-dropdown-item>狮子头</el-dropdown-item>
+                <el-dropdown-item>螺蛳粉</el-dropdown-item>
+                <el-dropdown-item>双皮奶</el-dropdown-item>
+                <el-dropdown-item>蚵仔煎</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+            </div>
+
+        </div>
+
+        {# data table #}
+        <div class="datatable">
+            <el-tabs type="border-card" value="second">
+
+                {# 所有数据 #}
+                <el-tab-pane label="所有(499)" name="first">
+                    <ordertable :dataSource="tableData"></ordertable>
+                </el-tab-pane>
+
+                {# 有库存数据 #}
+                <el-tab-pane label="有库存(0)" name="second">
+                    <ordertable :dataSource="tableData"></ordertable>
+                </el-tab-pane>
+
+                {# 无库存数据 #}
+                <el-tab-pane label="无库存(499)" name="third">
+                    <orderTable :dataSource="tableData"></orderTable>
+                </el-tab-pane>
+            </el-tabs>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

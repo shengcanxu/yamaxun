@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load render_bundle from webpack_loader %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/dist/style.css"/>
+    <link rel="stylesheet" href="/static/dist/bootstrap/bootstrap.css"/>
+    <script type="javascript" src="/static/dist/bootstrap/bootstrap.js"></script>
+
+</head>
+<body>
+<div class="navigation">
+    <ul class="nav">
+        <li class="drop-down"><a href="#">首页</a>
+
+        </li>
+        <li class="drop-down"><a href="#">订单</a>
+            <ul class="drop-down-content">
+                <li><a href="#">订单管理</a></li>
+                <li><a href="#">订单同步</a></li>
+            </ul>
+        </li>
+        <li class="drop-down"><a href="#">仓库</a>
+            <ul class="drop-down-content">
+                <li><a href="#">仓库管理</a></li>
+                <li><a href="#">商品列表</a></li>
+            </ul>
+        </li>
+        <li class="drop-down"><a href="#">物流</a>
+            <ul class="drop-down-content">
+                <li><a href="#">物流设置</a></li>
+                <li><a href="#">运费设置</a></li>
+            </ul>
+        </li>
+        <li class="drop-down"><a href="#">数据</a>
+            <ul class="drop-down-content">
+                <li><a href="#">产品统计</a></li>
+                <li><a href="#">订单统计</a></li>
+                <li><a href="#">物流统计</a></li>
+                <li><a href="#">运营统计</a></li>
+            </ul>
+        </li>
+        <li class="drop-down rightmenu"><a href="#">账号</a>
+            <ul class= "drop-down-content">
+                <li><a href="#">账号信息</a></li>
+                <li><a href="#">系统设置</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div></div>
+</div>
+
+
+<div class="content">
+    <div class="leftpanel" id="leftpannel">
+        {% block leftpanel %}{% endblock %}
+    </div>
+
+    <div class="rightpanel" id="rightpannel">
+        {% block rightpanel %}{% endblock %}
+    </div>
+</div>
+
+{% render_bundle 'main' %}
+</body>
+</html>
